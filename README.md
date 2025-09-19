@@ -83,7 +83,7 @@ Fluxo básico:
 
 ## 📖 Endpoints Principais
 
-Os endpoints serão listados [aqui](), com um arquivo markdown explicando as rotas e como será enviado o corpo da requisição.
+Os endpoints serão listados [aqui](https://github.com/matheusaugusto98521/bookWise-api/tree/main/endpoints), com um arquivo markdown explicando as rotas e como será enviado o corpo da requisição.
 
 ## 🤝 Contribuição
 
