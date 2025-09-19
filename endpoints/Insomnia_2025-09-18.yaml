@@ -1,0 +1,800 @@
+type: collection.insomnia.rest/5.0
+name: book-wise-collection
+meta:
+  id: wrk_ec2a0c0bd392477194b2123b1b754942
+  created: 1754444438594
+  modified: 1754444438594
+  description: ""
+collection:
+  - name: Author
+    meta:
+      id: fld_7284febd4aeb49a3bc86203cde645245
+      created: 1754444448633
+      modified: 1754444448633
+      sortKey: -1754444448633
+      description: ""
+    children:
+      - url: "{{ _.base_url }}author/"
+        name: Get All Authors
+        meta:
+          id: req_4c24b49af5174de3b14623e585aec6d6
+          created: 1754444891893
+          modified: 1754445220631
+          isPrivate: false
+          description: ""
+          sortKey: -1754444891893
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}author/get-by-id"
+        name: Get Author By Id
+        meta:
+          id: req_dc951d6772ed45fd95aa79b2ad037026
+          created: 1754444920241
+          modified: 1754446769182
+          isPrivate: false
+          description: ""
+          sortKey: -1754444920241
+        method: GET
+        parameters:
+          - id: pair_9c47b871dc044f3db140c01db7a1bc4f
+            name: idAuthor
+            value: daa0b4ef-b35c-451e-9890-e8558d8dea96
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}author/delete"
+        name: Delete Author
+        meta:
+          id: req_cc29394042f34b83a87f82379853b128
+          created: 1754444922129
+          modified: 1754446784849
+          isPrivate: false
+          description: ""
+          sortKey: -1754444922129
+        method: DELETE
+        parameters:
+          - id: pair_0f534336b8ad4c9ba38dfe5e6d4fb403
+            name: idAuthor
+            value: daa0b4ef-b35c-451e-9890-e8558d8dea96
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}author/update"
+        name: Update Author
+        meta:
+          id: req_c68e2677ffe74790b2ecaa3350ea207b
+          created: 1754444923915
+          modified: 1754446740107
+          isPrivate: false
+          description: ""
+          sortKey: -1754444923915
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"nameAuthor" : "Chico Buarque de Holanda",
+            	"biography" : "Grande Poeta Renascentista Brasileiro, Grande nome do liriscismo",
+            	"birthDate" : "19/06/1944"
+            }
+        parameters:
+          - id: pair_47397de6460a4afab6f2f64e120fd48e
+            name: idAuthor
+            value: daa0b4ef-b35c-451e-9890-e8558d8dea96
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}author/create"
+        name: Create Author
+        meta:
+          id: req_48f8f19873494f1f90d1bf0f74f44486
+          created: 1754444925815
+          modified: 1754446705087
+          isPrivate: false
+          description: ""
+          sortKey: -1754444925815
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nameAuthor" : "Chico Buarque de Holanda",
+            	"biography" : "Grande Poeta Renascentista Brasileiro",
+            	"birthDate" : "19/06/1944"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Category
+    meta:
+      id: fld_ef0c1bb7df9047549efc4d1b382d8303
+      created: 1754444455192
+      modified: 1754444455192
+      sortKey: -1754444455192
+      description: ""
+    children:
+      - url: "{{ _.base_url }}category/"
+        name: Get All Categories
+        meta:
+          id: req_5b3b824a41214514b496c3da7c8ea44d
+          created: 1754444473628
+          modified: 1754444872566
+          isPrivate: false
+          description: ""
+          sortKey: -1754444473628
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}category/get-by-id"
+        name: Get Category By Id
+        meta:
+          id: req_4e7371bae0dc493f82ecb2f8697dc3a6
+          created: 1754444475304
+          modified: 1754446541063
+          isPrivate: false
+          description: ""
+          sortKey: -1754444475304
+        method: GET
+        parameters:
+          - id: pair_7f7b8af7c86f4151afd75e57d1fd9606
+            name: idCategory
+            value: b1b1a3db-2672-4dc7-99ad-fe5f5e25bf85
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}category/delete"
+        name: Delete Category
+        meta:
+          id: req_30464f86b881467aa442800f044211dd
+          created: 1754444477000
+          modified: 1754446607165
+          isPrivate: false
+          description: ""
+          sortKey: -1754444477000
+        method: DELETE
+        parameters:
+          - id: pair_ea20a4984e504291a6a88ba4d4040021
+            name: idCategory
+            value: b1b1a3db-2672-4dc7-99ad-fe5f5e25bf85
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}category/update"
+        name: Update Category
+        meta:
+          id: req_0575c9badadb405186687431f8a2e0f7
+          created: 1754444491911
+          modified: 1754446533479
+          isPrivate: false
+          description: ""
+          sortKey: -1754444491911
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nameCategory" : "Comédia Romântica",
+            	"descriptionCategory" : "Livros com temas humorísticos e romance"
+            }
+        parameters:
+          - id: pair_9dc86c2da50d4995bb4245e1b69da248
+            name: idCategory
+            value: b1b1a3db-2672-4dc7-99ad-fe5f5e25bf85
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}category/create"
+        name: Create Category
+        meta:
+          id: req_f2f1308060b2443b8fdcec8bea1bc371
+          created: 1754444493701
+          modified: 1754444668024
+          isPrivate: false
+          description: ""
+          sortKey: -1754444493701
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nameCategory" : "Comédia",
+            	"descriptionCategory" : "Livros com temas humorísticos"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Book
+    meta:
+      id: fld_2f9ed326df0340dba75d2b8b8d42601f
+      created: 1754444461540
+      modified: 1754444461540
+      sortKey: -1754444461540
+      description: ""
+    children:
+      - url: "{{ _.base_url }}book/return-book"
+        name: Return Book
+        meta:
+          id: req_cdb24ce26d0a482e9d696be191b7d27b
+          created: 1754445743482
+          modified: 1754448059363
+          isPrivate: false
+          description: ""
+          sortKey: -1754445743482
+        method: PUT
+        parameters:
+          - id: pair_c845acc1aaf749a5ba23c1ab87bcd364
+            name: idUser
+            value: 05a9add9-5825-4eba-bc45-c4825e3cf939
+            description: ""
+            disabled: false
+          - id: pair_a4d41fd494d641b5ba8c87fbdbd81b62
+            name: isbn
+            value: "9788551307274"
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}book/lend-book"
+        name: Lend Book
+        meta:
+          id: req_e430147b295e4b57bc74932f7141730e
+          created: 1754445744974
+          modified: 1754448257819
+          isPrivate: false
+          description: ""
+          sortKey: -1754445744974
+        method: POST
+        parameters:
+          - id: pair_af5df7dfd8bf40589bf4f93b748b0b17
+            name: isbn
+            value: "9788551307274"
+            description: ""
+            disabled: false
+          - id: pair_657d78405e444d3896aecf58f4c2d057
+            name: idUser
+            value: 05a9add9-5825-4eba-bc45-c4825e3cf939
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}book/"
+        name: Get All Books
+        meta:
+          id: req_2ca0b154ce2f4fd8b125c91dfd579ab1
+          created: 1754445746333
+          modified: 1754446105615
+          isPrivate: false
+          description: ""
+          sortKey: -1754445746333
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}book/get-by-isbn"
+        name: Get Book By Isbn
+        meta:
+          id: req_406b779edf4742b782d975eb6d65cd48
+          created: 1754445747537
+          modified: 1754447958216
+          isPrivate: false
+          description: ""
+          sortKey: -1754445747537
+        method: GET
+        parameters:
+          - id: pair_56c2312c83424582bd6c70023ca4e21c
+            name: isbn
+            value: "9788551307274"
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}book/get-by-id"
+        name: Get Book By Id
+        meta:
+          id: req_4f413181e02544bba1f7595eead6bcf4
+          created: 1754445749091
+          modified: 1754447950281
+          isPrivate: false
+          description: ""
+          sortKey: -1754445749091
+        method: GET
+        parameters:
+          - id: pair_b86330d5797d44c29e9cb22eb92a69d7
+            name: idBook
+            value: 1df81e16-7f0e-45f4-94b3-5143bb46bf9e
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}book/delete"
+        name: Delete Book
+        meta:
+          id: req_4bba562d14ca48cfb13cf65b080a2012
+          created: 1754445750732
+          modified: 1754446001731
+          isPrivate: false
+          description: ""
+          sortKey: -1754445750732
+        method: DELETE
+        parameters:
+          - id: pair_d44e87e0810f4d6eae42c91e1b84f2c9
+            name: idBook
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}book/update"
+        name: Update Book
+        meta:
+          id: req_db5815d0bf6a41ca8b29cef048771529
+          created: 1754445752187
+          modified: 1754616114616
+          isPrivate: false
+          description: ""
+          sortKey: -1754445752187
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title" : "Chapéuzinho Amarelo 2",
+            	"yearPublication" : 1996,
+            	"numberPages" :5
+            }
+        parameters:
+          - id: pair_611dc601ff3045958b28b22c44f543e4
+            name: idBook
+            value: b0ca176f-625a-4f75-81dc-ee81e710a6ca
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}book/create"
+        name: Create Book
+        meta:
+          id: req_fb86b17310b54e9991e19531cc4eea1b
+          created: 1754445753753
+          modified: 1754616077668
+          isPrivate: false
+          description: ""
+          sortKey: -1754445753753
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title" : "Chapéuzinho Amarelo",
+            	"isbn" : "9788551307274",
+            	"numberPages" :5,
+            	"yearPublication" : 1995
+            }
+        parameters:
+          - id: pair_58756eccd19f4fd7bbad0788c31d1c54
+            name: idAuthor
+            value: e3c7a18e-8ff3-4ae3-b02b-d6e4552a1a6c
+            description: ""
+            disabled: false
+          - id: pair_8c0eee06db424b16830f9f02482771b0
+            name: idCategory
+            value: 3462b64d-db58-4cd6-b7dd-80d8cc3a262f
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: User
+    meta:
+      id: fld_a435b7d30218419496de1ac108bbeb1e
+      created: 1754444467127
+      modified: 1754444467127
+      sortKey: -1754444467127
+      description: ""
+    children:
+      - url: "{{ _.base_url }}access/books"
+        name: Get Books By User
+        meta:
+          id: req_53b74ca2d7b0458e9917d4a14c691a9b
+          created: 1754445316552
+          modified: 1754447190795
+          isPrivate: false
+          description: ""
+          sortKey: -1754445316552
+        method: GET
+        parameters:
+          - id: pair_b2ee813627bf46e28872fe3a166a83b2
+            name: idUser
+            value: e4e43755-8789-4f79-b40c-d014b87ef0da
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}access/"
+        name: Get All Users
+        meta:
+          id: req_0670d9f0f1824a0eba4bceb1dc81fbe2
+          created: 1754445319010
+          modified: 1758242403421
+          isPrivate: false
+          description: ""
+          sortKey: -1754445319010
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJib29rV2lzZSIsInN1YiI6Im1hdGhldXNmZXJyZWlyYXNvYXJlczEyMzQ1NiIsImlkQWRtaW4iOiI2NmMwMTlkMC1jMzMxLTRlMWEtYmU5OS1iZDUwOWQxZTlhN2MiLCJpZFVzZXIiOm51bGwsImV4cCI6MTc1ODI0OTU3N30.Jg3sJYDIZJsDnONo8QtoUeuhidQ49_QAJeAzY_2GRbg
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}access/get-by-id"
+        name: Get User By Id
+        meta:
+          id: req_e1e53e1755854d6687efb4e806419f42
+          created: 1754445323704
+          modified: 1754447178651
+          isPrivate: false
+          description: ""
+          sortKey: -1754445323704
+        method: GET
+        parameters:
+          - id: pair_6882682c2a9a482490252086fd0876a4
+            name: idUser
+            value: e4e43755-8789-4f79-b40c-d014b87ef0da
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}access/delete"
+        name: Delete User
+        meta:
+          id: req_a4f138307e5146a89a459010f9da3d74
+          created: 1754445325089
+          modified: 1754445603328
+          isPrivate: false
+          description: ""
+          sortKey: -1754445325089
+        method: DELETE
+        parameters:
+          - id: pair_53d9f305d6e54c048cc6d6c0da6f6408
+            name: idUser
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}access/update"
+        name: Update User
+        meta:
+          id: req_6d3a327077834cd09ae462a357b0c752
+          created: 1754445327798
+          modified: 1754446999569
+          isPrivate: false
+          description: ""
+          sortKey: -1754445327798
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name" : "Matheus Augusto Ferreira Soares",
+            	"username" : "matheusferreirasoares1234",
+            	"emailUser" : "matheusferreirasoares1234@gmail.com",
+            	"password" : "996629300Ma@",
+            	"role" : "Admin"
+            }
+        parameters:
+          - id: pair_7120006e4c6940d6aa50a06de702c3ee
+            name: idUser
+            value: e4e43755-8789-4f79-b40c-d014b87ef0da
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}access/create"
+        name: Create User
+        meta:
+          id: req_03386e17aee34dc0aca29612c4f42361
+          created: 1754445329278
+          modified: 1758242350851
+          isPrivate: false
+          description: ""
+          sortKey: -1754445329279
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name" : "Matheus Augusto Ferreira Soares 2",
+            	"username" : "matheusferreirasoares123456",
+            	"emailUser" : "matheusferreirasoares123456@gmail.com",
+            	"password" : "996629300Ma@",
+            	"role" : "Admin"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Security
+    meta:
+      id: fld_1d034074b30245f08fdda9617d09af51
+      created: 1758242121071
+      modified: 1758242121071
+      sortKey: -1758242121071
+      description: ""
+    children:
+      - url: "{{ _.base_url }}security/login"
+        name: Login
+        meta:
+          id: req_74b6b9ec039c48e981e98062e5432ef7
+          created: 1758242125380
+          modified: 1758242375054
+          isPrivate: false
+          description: ""
+          sortKey: -1758242125380
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"username" : "matheusferreirasoares123456",
+            	"password" : "996629300Ma@"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_aa8cef4482088f82a447478acd2b6fb98ae0d917
+    created: 1754444438603
+    modified: 1754444438603
+environments:
+  name: Base Environment
+  meta:
+    id: env_aa8cef4482088f82a447478acd2b6fb98ae0d917
+    created: 1754444438597
+    modified: 1754444535297
+    isPrivate: false
+  data:
+    base_url: http://localhost:8080/
