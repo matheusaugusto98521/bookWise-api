@@ -25,7 +25,7 @@ public class UserController {
     private UserServices services;
 
     @PostMapping("/create")
-    public ResponseEntity<ResponseDTO<User>> createUser(@RequestBody @Valid UserRequestDTO data) throws NullInformationException, ModelExistsException {
+    public ResponseEntity<ResponseDTO<User>> createUser(@RequestBody @Valid UserRequestDTO data) throws NullInformationException, ModelExistsException, ModelNotFoundException {
         User user = this.services.createUser(data);
         return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDTO<User>("Usuário criado com sucesso!", user));
     }

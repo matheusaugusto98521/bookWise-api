@@ -27,7 +27,7 @@ public class UserServices implements UserDetailsService {
     private AuthServices authServices;
     private Validation validation;
 
-    public User createUser(UserRequestDTO data) throws NullInformationException, ModelExistsException {
+    public User createUser(UserRequestDTO data) throws NullInformationException, ModelExistsException, ModelNotFoundException {
         User user = new User();
 
         this.validation.validateUserDataCreate(data, null);

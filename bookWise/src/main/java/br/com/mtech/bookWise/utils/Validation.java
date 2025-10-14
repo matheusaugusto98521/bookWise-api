@@ -28,7 +28,7 @@ public class Validation {
     private IBookRepository bookRepository;
     private ICategoryRepository categoryRepository;
 
-    public void validateUserDataCreate(UserRequestDTO data, UUID idFindUser) throws NullInformationException, ModelExistsException {
+    public void validateUserDataCreate(UserRequestDTO data, UUID idFindUser) throws NullInformationException, ModelExistsException, ModelNotFoundException {
         if(data == null ||
         data.name().isBlank() ||
         data.username().isBlank() ||
@@ -44,7 +44,9 @@ public class Validation {
             throw new ModelExistsException("Nome de Usuário já está em uso!");
         }
 
-        User byEmailUser = this.userRepository.findByEmailUser(data.emailUser());
+        User byEmailUser = this.userRepository.findByEmailUser(data.emailUser()).orElseThrow(
+                () -> new ModelNotFoundException("Usuário não encontrado para o email: " + data.emailUser())
+        );
         if(byEmailUser != null && !byEmailUser.getIdUser().equals(idFindUser)){
             throw new ModelExistsException("Email de Usuário já está em uso!");
 
