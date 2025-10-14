@@ -68,6 +68,16 @@ Ou, se você usa Maven instalado globalmente:
     ```
     mvn spring-boot:run
     ```
+    
+## 🧪 Rodar os Testes
+
+Para executar os testes automatizados do projeto, é necessário ter o Maven instalado na máquina.
+Com o Maven configurado, no diretório raiz do projeto, rode:
+    ```
+    mvn test
+    ```
+
+Isso executará todos os testes unitários e de integração configurados no projeto(Para funcionar, você deve deixar o servidor SQL no Xampp rodando, pois esse comando subirá o JPA Context, inicializando assim toda a aplicação até chegar aos testes).
 
 ## 🔑 Autenticação com JWT
 
